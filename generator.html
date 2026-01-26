@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
   <head>
     <meta charset="UTF-8" />
@@ -57,7 +57,8 @@
         margin-bottom: 4px;
       }
 
-      .form-group input, .form-group textarea {
+      .form-group input,
+      .form-group textarea {
         width: 90%;
         padding: 8px 12px;
         font-size: 14px;
@@ -130,38 +131,69 @@
         </div>
 
         <div class="form-group">
-          <label>Блок №2. Заголовок</label><input id="block_2_title" value="Определите, с кем вы хотите встретиться" />
+          <label>Блок №2. Заголовок</label
+          ><input
+            id="block_2_title"
+            value="Определите, с кем вы хотите встретиться"
+          />
         </div>
         <div class="form-group">
-          <label>Блок №2. Контент</label><textarea id="block_2_content">На SUNTREE присутствуют:
+          <label>Блок №2. Контент</label
+          ><textarea id="block_2_content">
+На SUNTREE присутствуют:
  - собственники и директора производств
  - технические директора и главные инженеры
  - руководители закупок и развития
- - ЛПР (лица, принимающие решения)</textarea>
+ - ЛПР (лица, принимающие решения)</textarea
+          >
         </div>
 
         <div class="form-group">
-          <label>Блок №3</label><input id="block_3" value="Чёткая цель участия = точные контакты и предметные переговоры." />
+          <label>Блок №3</label
+          ><input
+            id="block_3"
+            value="Чёткая цель участия = точные контакты и предметные переговоры."
+          />
         </div>
 
         <div class="form-group">
-          <label>Блок №4. Заголовок</label><input id="block_4_title" value="Как получить максимум контактов на SUNTREE OIL & GRAIN EXPO 2026:" />
+          <label>Блок №4. Заголовок</label
+          ><input
+            id="block_4_title"
+            value="Как получить максимум контактов на SUNTREE OIL & GRAIN EXPO 2026:"
+          />
         </div>
 
         <div class="form-group">
-          <label>Блок №4. Контент</label><input id="block_4_content" value="Сформулируйте задачу участия. Определите, что для вас приоритетно: модернизация, оптимизация, рост или новые рынки. Чем конкретнее задача — тем полезнее встречи." />
+          <label>Блок №4. Контент</label
+          ><input
+            id="block_4_content"
+            value="Сформулируйте задачу участия. Определите, что для вас приоритетно: модернизация, оптимизация, рост или новые рынки. Чем конкретнее задача — тем полезнее встречи."
+          />
         </div>
 
         <div class="form-group">
-          <label>Блок №4. Подтекст</label><input id="block_4_subtitle" value="Именно под такие задачи приезжают экспоненты." />
+          <label>Блок №4. Подтекст</label
+          ><input
+            id="block_4_subtitle"
+            value="Именно под такие задачи приезжают экспоненты."
+          />
         </div>
 
         <div class="form-group">
-          <label>Блок №5</label><input id="block_5" value="Используйте зону экспонирования как пространство для переговоров, а каждый контакт — как начало дальнейшей работы: встречи, расчёта, коммерческого предложения." />
+          <label>Блок №5</label
+          ><input
+            id="block_5"
+            value="Используйте зону экспонирования как пространство для переговоров, а каждый контакт — как начало дальнейшей работы: встречи, расчёта, коммерческого предложения."
+          />
         </div>
 
         <div class="form-group">
-          <label>Блок №6</label><input id="block_6" value="SUNTREE OIL & GRAIN EXPO 2026 — площадка, где подготовка превращается в результат, а контакты — в контракты." />
+          <label>Блок №6</label
+          ><input
+            id="block_6"
+            value="SUNTREE OIL & GRAIN EXPO 2026 — площадка, где подготовка превращается в результат, а контакты — в контракты."
+          />
         </div>
       </div>
 
@@ -210,14 +242,14 @@
                 <td
                   style="height: 100%; background: #075054; width: 200px; border-radius: 0 0 0 30px; padding: 20px; box-sizing: border-box; text-align: center;"
                 >
-                  <div style="background: white; color: #054f54; padding: 8px; border-radius: 6px; font-size: 18px; font-weight: bold; text-transform: uppercase;">
-                    ${v('location')}
+                  <div style="background: white; color: #054f54; padding: 8px 2px; border-radius: 6px; font-size: 18px; font-weight: bold; text-transform: uppercase;">
+                    ${v("location")}
                   </div>
                   <div style="color: white; font-size: 40px; font-weight: bold; margin-top: 10px; text-transform: uppercase;">
-                    ${v('location_2')}
+                    ${v("location_2")}
                   </div>
                   <div style="color: white; font-size: 28px; font-weight: bold; margin-top: 10px; text-transform: uppercase;">
-                    ${v('sity')}
+                    ${v("sity")}
                   </div>
                 </td>
                 <td
@@ -232,13 +264,13 @@
                   style="height: 100%; background: #075054; width: 200px; border-radius: 0 0 30px 0; padding: 18px; box-sizing: border-box; text-align: center;"
                 >
                   <div style="color: white; font-size: 56px; font-weight: bold; line-height: 1; text-transform: uppercase;">
-                    ${v('date')}
+                    ${v("date")}
                   </div>
                   <div style="color: white; font-size: 28px; font-weight: bold; margin-top: 2px; text-transform: uppercase;">
-                    ${v('mounth')}
+                    ${v("mounth")}
                   </div>
                   <div style="background: white; color: #054f54; padding: 0px; border-radius: 6px; font-size: 36px; font-weight: normal; margin-top: 10px; text-transform: uppercase; letter-spacing: 4px;">
-                    ${v('year')}
+                    ${v("year")}
                   </div>
                 </td>
               </tr>
@@ -276,22 +308,22 @@
               <pre
                 style="margin: 0; color: white; font-family: Arial, Helvetica, sans-serif; font-size: 18px;"
               >
-<b>${v('block_2_title')}</b>
+<b>${v("block_2_title")}</b>
 
-${v('block_2_content')}
+${v("block_2_content")}
 </pre
               >
             </div>
 
             <p style="font-size: 20px; padding-left: 10px; margin-left: 10px;">
-${v('block_3')}
+${v("block_3")}
             </p>
 
             <div style="background: #075054; padding: 20px; border-radius: 10px;">
               <p
                 style="margin: 0; color: white; font-family: Arial, Helvetica, sans-serif; font-size: 18px; width: 100%; word-wrap: break-word;"
               >
-                <span style="color: white;">${v('block_4_title')}
+                <span style="color: white;">${v("block_4_title")}
 </span>
                 <p></p>
                 <table width="100%" style="margin-bottom: 5px; table-layout: fixed;">
@@ -300,14 +332,147 @@ ${v('block_3')}
                       <img src="https://s3.twcstorage.ru/fee620fd-suntree/formailng/1.png" width="30" height="30" />
                     </td>
                     <td style="color: white; padding-left: 6px;">
-                      ${v('block_4_content')}
+                      ${v("block_4_content")}
                     </td>
                   </tr>
                 </table>
+                <p style="color: white;">${v("block_4_subtitle")}</p>
+              </p>
               </p>
             </div>
           </td>
         </tr>
+        
+        <!-- КОНТЕНТ -->
+        <tr>
+          <td colspan="3" style="padding: 10px 35px; color: #04302f; font-size: 16px; line-height: 1.6;">
+            <p style="font-size: 18px; line-height: 1.2; margin: 0 0 5px 0; text-align: center;">
+${v("block_5")}</p>
+<p style="height: 5px;"></p>            <div style="width: 100%; text-align: center;">
+              <a
+                href="https://stevent.ru/events/suntree-oil-grain-expo-2026#register"
+                target="_blank"
+                style="
+                  margin: 5px auto;
+                  color: black;
+                  background: linear-gradient(rgba(97, 161, 116, 1), rgba(88, 190, 142, 1), rgba(46, 218, 144, 1));
+                  padding: 15px;
+                  border-radius: 10px;
+                  text-decoration: none;
+                  font-size: 20px;
+                  font-weight: 900;
+                "
+              >
+                ОСТАВЬТЕ ЗАЯВКУ НА УЧАСТИЕ
+              </a>
+            </div>            <p style="height: 5px;"></p>
+
+
+
+            <hr style="border: 1px solid #075054; margin-top: 10px" />
+
+            <p
+              style="margin: 10px 0 10px 0; font-size: 18px; font-weight: bold; color: rgba(7, 80, 84, 1); line-height: 1.2; text-align: center;"
+            >
+           ${v("block_6")}
+            </p>
+            <hr style="border: 1px solid #075054; margin-top: 10px" />
+          </td>
+        </tr>
+
+        <!-- ФУТЕР -->
+        <tr>
+          <td colspan="3" style="height: 200px; text-align: center;">
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <tr>
+                <td style="height: 200px; background: #075054; width: 200px; border-radius: 30px 0 0 0; padding: 20px;">
+                  <a href="https://stevent.ru" target="_blank">
+                    <img src="https://s3.twcstorage.ru/fee620fd-suntree/formailng/logo.png" width="130"/>
+                  </a>
+                </td>
+                <td
+                  style="height: 240px; width: 221px; display: flex; align-items: center; background: #075054; text-align: center; color: white;"
+                >
+                  <div
+                  style="
+                    color: white;
+                    text-align: center;
+                    font-size: 20px;
+                    font-weight: normal;
+                    line-height: 1;
+                    margin: 0 auto;
+                    padding: 10px;
+                    text-transform: uppercase;
+                  "
+                >
+                  <a
+                    href="tel:+79932999530"
+                    style="
+                      color: white;
+                      text-decoration: none;
+                      font-weight: bold;
+                    "
+                    target="_blank"
+                    >+7(993) 299 95 30</a
+                  >
+                  <br />
+                  <div style="margin-top: 3px">
+                    <a
+                      href="mailto:info@stevent.ru"
+                      style="
+                        color: white;
+                        text-decoration: none;
+                        padding-top: 10px;
+                        font-weight: lighter;
+                      "
+                      target="_blank"
+                      >info@stevent.ru</a
+                    >
+                  </div>
+                  <br />
+                  <div style="margin-top: 1px">
+                    <a
+                      href="stevent.ru"
+                      style="
+                        color: white;
+                        text-decoration: none;
+                        padding-top: 10px;
+                        font-size: 18px;
+                      "
+                      target="_blank"
+                      >stevent.ru</a
+                    >
+                  </div>
+
+                <hr style="border: 1px solid rgba(255, 255, 255, 0.2); margin-top: 10px" />
+                  <span style="font-size: 14px">
+                    <a
+                      href="{{unsubscribe_link}}"
+                      style="
+                        color: rgba(255, 255, 255, 1);
+                        text-decoration: underline;
+                        text-transform: none;
+                        font-size: 12px;
+                      "
+                      >отписаться от рассылки</a
+                    >
+                  </span>
+                </div>
+                </td>
+                <td
+                  style="height: 200px; background: #075054; width: 200px; border-radius: 0 30px 0 0; padding: 18px; box-sizing: border-box; text-align: center;"
+                >
+                  <a
+                    href="https://stevent.ru/events/suntree-oil-grain-expo-2026#register"
+                    style="text-decoration: none;"
+                    target="_blank"
+                  >
+                    <span style="font-size: 12px; color: white;">ЗАРЕГИСТРИРУЙТЕСЬ</span>
+                    <img src="https://s3.twcstorage.ru/fee620fd-suntree/formailng/qr.svg" width="126" height="126" />
+                    <span style="font-size: 12px; color: white;">ВХОД БЕСПЛАТНЫЙ</span>
+                  </a>
+                </td>
+              </tr>
       </table>
     </div>
   </body>
@@ -323,7 +488,7 @@ ${v('block_3')}
 
       function copyHtml() {
         navigator.clipboard.writeText(
-          document.getElementById("htmlOutput").value
+          document.getElementById("htmlOutput").value,
         );
         document.getElementById("copyStatus").textContent = "Скопировано!";
       }
