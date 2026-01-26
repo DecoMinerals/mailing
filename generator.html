@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Генератор подписи Deco Minerals</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Montserrat", sans-serif;
+        background: #f3f6fb;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 24px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+
+      @media (max-width: 900px) {
+        .container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .card {
+        background: #fff;
+        border-radius: 14px;
+        padding: 24px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 26px;
+        margin-top: 0;
+        color: #000080;
+      }
+
+      .form-group {
+        margin-bottom: 14px;
+      }
+      .form-group label {
+        font-size: 14px;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 4px;
+      }
+
+      .form-group input {
+        width: 90%;
+        padding: 8px 12px;
+        font-size: 14px;
+        border-radius: 8px;
+        border: 1px solid #cdd3dd;
+      }
+
+      .btn {
+        background: #000080;
+        border: none;
+        color: white;
+        padding: 10px 18px;
+        border-radius: 50px;
+        cursor: pointer;
+        font-weight: 600;
+        margin-right: 10px;
+      }
+
+      #htmlOutput {
+        width: 100%;
+        height: 240px;
+        border-radius: 8px;
+        padding: 12px;
+        font-family: monospace;
+        margin-top: 16px;
+        border: 1px solid #cdd3dd;
+      }
+
+      .signature-wrapper {
+        overflow-x: auto;
+      }
+
+      .signature-preview {
+        transform: scale(0.9);
+        transform-origin: top left;
+      }
+
+      .CopyStatus {
+        font-size: 12px;
+        color: #059669;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <!-- ЛЕВАЯ ПАНЕЛЬ — ФОРМА -->
+      <div class="card">
+        <h1>Генератор рассылки</h1>
+
+        <!-- Место -->
+        <div class="form-group">
+          <label>Место</label><input id="location" value="55 павильон" />
+        </div>
+        <div class="form-group">
+          <label>Место 2</label><input id="location_2" value="ВДНХ" />
+        </div>
+        <div class="form-group">
+          <label>Город</label><input id="sity" value="Москва" />
+        </div>
+
+        <!-- Дата -->
+        <div class="form-group">
+          <label>Число</label
+          ><input id="date" value="26-29" />
+        </div>
+        <div class="form-group">
+          <label>Месяц</label
+          ><input id="mounth" value="Апреля" />
+        </div>
+        <div class="form-group">
+          <label>Год</label
+          ><input id="year" value="2026" />
+        </div>
+
+        <!-- Блок 2 -->
+        <div class="form-group">
+          <label>Блок №2. Заголовок</label
+          ><input id="block_2_title" value="Определите, с кем вы хотите встретиться" />
+        </div>
+        <div class="form-group">
+          <label>Блок №2. Контент</label
+          ><textarea id="block_2_content" value="
+На SUNTREE присутствуют:
+  - собственники и директора производств
+  - технические директора и главные инженеры
+  - руководители закупок и развития
+  - ЛПР (лица, принимающие решения)"></textarea>
+        </div>
+        <!-- Блок 3 -->
+        <div class="form-group">
+          <label>Блок №3</label
+          ><input id="block_1_title" value="Чёткая цель участия = точные контакты и предметные переговоры." />
+        </div>
+                <!-- Блок 4 -->
+        <div class="form-group">
+          <label>Блок №4.Заголовок</label
+          ><input id="block_4_title" value="Как получить максимум контактов
+на SUNTREE OIL & GRAIN EXPO 2026:" />
+        </div>
+                <div class="form-group">
+          <label>Блок №4.Контент</label
+          ><input id="block_4_content" value="Сформулируйте задачу участия. Определите, что для вас приоритетно: модернизация, оптимизация, рост или новые рынки. Чем конкретнее задача — тем полезнее встречи.">   </td>
+" />
+        </div>
+                        <div class="form-group">
+          <label>Блок №4.Подтекст</label
+          ><input id="block_4_subtitle" value="Именно под такие задачи приезжают экспоненты.">            </p>
+    </td>
+" />
+        </div>
+                                <div class="form-group">
+          <label>Блок №5</label
+          ><input id="block_5" value="Используйте зону экспонирования как пространство для переговоров, а каждый контакт — как начало дальнейшей работы: встречи, расчёта, коммерческого предложения.">            </p>
+    </td>
+" />
+        </div>
+                                        <div class="form-group">
+          <label>Блок №6</label
+          ><input id="block_6" value="
+SUNTREE OIL & GRAIN EXPO 2026 —
+площадка, где подготовка превращается в результат, а контакты — в контракты.">            </p>
+    </td>
+" />
+        </div>
+
+                
+        
+
+      <!-- ПРАВАЯ ПАНЕЛЬ — ПРЕВЬЮ -->
+      <div class="card">
+        <h2 style="margin-top: 0; color: #000080">Предпросмотр</h2>
+        <div class="signature-wrapper">
+          <div id="signaturePreview" class="signature-preview"></div>
+          <p style="font-size: 16px; line-height: 1.6; margin: 0;">
+            <b>Добавление подписи в Яндекс.Почту</b><br />
+            Чтобы установить подпись в <b>Яндекс.Почту</b>, просто<br />
+            ➤ <b>скопируйте блок «Предпросмотр»</b>, который отображается
+            выше,<br />
+            ➤ и вставьте его в настройки подписи Яндекс.Почты. Нажмите на
+            галочку <b>"привязать к адресу..."</b><br />
+            ➤ при отправке письма <b>выберите подпись</b> в конце отправляемого
+            письма.
+          </p>
+          <hr
+            style="border: none; border-top: 1px solid #ddd; margin: 20px 0"
+          />
+          <p style="font-size: 16px; line-height: 1.6">
+            <b>Добавление подписи в Thunderbird</b><br />
+            Для корректной установки подписи в <b>Thunderbird</b> выполните
+            следующие шаги:
+          </p>
+          <ul style="font-size: 16px; line-height: 1.6; margin-top: 10px">
+            <li>
+              Нажмите на кнопку ниже после инструкции <b>«Скопировать HTML»</b>.
+            </li>
+            <li>
+              Откройте Thunderbird и перейдите в:<br />
+              <b>Меню → Настройки → Параметры учётной записи</b>.
+            </li>
+            <li>В левом столбце выберите вашу почту.</li>
+            <li>Прокрутите вниз до раздела <b>«Текст подписи»</b>.</li>
+            <li>
+              Обязательно поставьте галочку <b>«Использовать HTML»</b> (важно!).
+            </li>
+            <li>Вставьте скопированный HTML-код в текстовое поле подписи.</li>
+          </ul>
+          <p style="font-size: 16px; line-height: 1.6">
+            После закрытия окна настройки
+            <b>подпись сохранится автоматически</b>.
+          </p>
+          <p
+            style="
+              font-size: 16px;
+              line-height: 1.6;
+              color: #b80000;
+              font-weight: 600;
+            "
+          >
+            ⚠ Обязательно выполните проверку: отправьте письмо на свою почту,
+            чтобы убедиться, что подпись отображается правильно и все данные
+            корректны.
+          </p>
+        </div>
+        <button class="btn" onclick="copyHtml()">Скопировать HTML</button>
+        <button class="btn" onclick="downloadHtml()">Скачать HTML</button>
+
+        <textarea id="htmlOutput" readonly></textarea>
+        <div id="copyStatus" class="CopyStatus"></div>
+      </div>
+    </div>
+
+    <script>
+      function buildSignature() {
+        const v = (id) => document.getElementById(id).value;
+
+        return `
+<html>
+<style>
+.j{height:20px;display:flex;align-items:center;}
+.i{height:30px;}
+.myt{padding:5px;width:500px;}
+*{font-family:"Montserrat",sans-serif;color:#000080;font-size:16px;text-decoration:none;}
+</style>
+
+<img style="width:580px;" src="https://s3.twcstorage.ru/fee620fd-suntree/logo_products_thunderbird/header.jpg">
+
+<div class="myt">
+  <table width="490">
+  <tr>
+    <td width="170" valign="top">
+      <img src="${v("photoUrl")}" width="154">
+    </td>
+    <td valign="top">
+      <u>
+        <b style="font-size:25px;text-transform:uppercase;">${v(
+          "lastName"
+        ).toUpperCase()}</b><br>
+        <div style="font-size:24px;">${v("firstName")} ${v("middleName")}</div>
+      </u>
+
+      <div style="margin-top:10px;">
+        ${v("position")}<br>${v("company")}
+      </div>
+        
+      <div style="margin-top:12px;">
+        
+      <div class="j">
+          <a href="mailto:${v("email")}" style="margin-left:5px;"> ${v("email")}</a>
+        </div>
+        <div class="j">
+          <a href="tel:${v("phone1")}" style="margin-left:5px;">${v("phone1")}</a>
+        </div>
+
+        ${
+          v("phone2")
+            ? `
+        <div class="j">
+          <a href="tel:${v("phone2")}" style="margin-left:5px;">${v("phone2")}</a>
+        </div>`
+            : ""
+        }
+
+        <div class="j">
+          <a href="https://${v("site")}" style="margin-left:5px;">${v("site")}</a>
+        </div>
+      </div>
+    </td>
+  </tr>
+  </table>
+</div>
+
+<img style="width:580px;" src="https://s3.twcstorage.ru/fee620fd-suntree/logo_products_thunderbird/line.png">
+
+<div style="display:flex;margin-top:20px;">
+<a href="https://benteco.ru"><img class="i" src="https://s3.twcstorage.ru/fee620fd-suntree/logo_products_thunderbird/benteco.png"></a>
+<a href="https://decofitr.ru"><img class="i" src="https://s3.twcstorage.ru/fee620fd-suntree/logo_products_thunderbird/filtr.png"></a>
+<a href="https://decoperl.ru"><img class="i" src="https://s3.twcstorage.ru/fee620fd-suntree/logo_products_thunderbird/perl.png"></a>
+<a href="https://decomol.ru"><img class="i" src="https://s3.twcstorage.ru/fee620fd-suntree/logo_products_thunderbird/mol.png"></a>
+<a href="https://decoseeds.ru"><img class="i" src="https://s3.twcstorage.ru/fee620fd-suntree/logo_products_thunderbird/seeds.png"></a>
+<a href="https://halofiltr.ru"><img class="i" src="https://s3.twcstorage.ru/fee620fd-suntree/logo_products_thunderbird/galo.png"></a>
+</div>
+</html>`;
+      }
+
+      function updatePreview() {
+        const html = buildSignature();
+        document.getElementById("signaturePreview").innerHTML = html;
+        document.getElementById("htmlOutput").value = html;
+      }
+
+      function copyHtml() {
+        navigator.clipboard.writeText(
+          document.getElementById("htmlOutput").value
+        );
+        document.getElementById("copyStatus").textContent = "Скопировано!";
+      }
+
+      function downloadHtml() {
+        const blob = new Blob([buildSignature()], { type: "text/html" });
+        const a = document.createElement("a");
+        a.href = URL.createObjectURL(blob);
+        a.download = "signature.html";
+        a.click();
+      }
+
+      document
+        .querySelectorAll("input")
+        .forEach((i) => i.addEventListener("input", updatePreview));
+      updatePreview();
+    </script>
+  </body>
+</html>
