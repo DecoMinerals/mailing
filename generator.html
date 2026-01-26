@@ -57,7 +57,7 @@
         margin-bottom: 4px;
       }
 
-      .form-group input {
+      .form-group input, .form-group textarea {
         width: 90%;
         padding: 8px 12px;
         font-size: 14px;
@@ -133,11 +133,15 @@
           <label>Блок №2. Заголовок</label><input id="block_2_title" value="Определите, с кем вы хотите встретиться" />
         </div>
         <div class="form-group">
-          <label>Блок №2. Контент</label><textarea id="block_2_content">На SUNTREE присутствуют: - собственники и директора производств - технические директора и главные инженеры - руководители закупок и развития - ЛПР (лица, принимающие решения)</textarea>
+          <label>Блок №2. Контент</label><textarea id="block_2_content">На SUNTREE присутствуют:
+ - собственники и директора производств
+ - технические директора и главные инженеры
+ - руководители закупок и развития
+ - ЛПР (лица, принимающие решения)</textarea>
         </div>
 
         <div class="form-group">
-          <label>Блок №3</label><input id="block_1_title" value="Чёткая цель участия = точные контакты и предметные переговоры." />
+          <label>Блок №3</label><input id="block_3" value="Чёткая цель участия = точные контакты и предметные переговоры." />
         </div>
 
         <div class="form-group">
@@ -272,26 +276,23 @@
               <pre
                 style="margin: 0; color: white; font-family: Arial, Helvetica, sans-serif; font-size: 18px;"
               >
-<b>Определите, с кем вы хотите встретиться</b>
+<b>${v('block_2_title')}</b>
 
-На SUNTREE присутствуют:
-  - собственники и директора производств
-  - технические директора и главные инженеры
-  - руководители закупок и развития
-  - ЛПР (лица, принимающие решения)
+${v('block_2_content')}
 </pre
               >
             </div>
 
             <p style="font-size: 20px; padding-left: 10px; margin-left: 10px;">
-              Чёткая цель участия = точные контакты и предметные переговоры.
+${v('block_3')}
             </p>
 
             <div style="background: #075054; padding: 20px; border-radius: 10px;">
               <p
                 style="margin: 0; color: white; font-family: Arial, Helvetica, sans-serif; font-size: 18px; width: 100%; word-wrap: break-word;"
               >
-                <span style="color: white;">Как получить максимум контактов <br/>на SUNTREE OIL & GRAIN EXPO 2026:</span>
+                <span style="color: white;">${v('block_4_title')}
+</span>
                 <p></p>
                 <table width="100%" style="margin-bottom: 5px; table-layout: fixed;">
                   <tr>
@@ -299,7 +300,7 @@
                       <img src="https://s3.twcstorage.ru/fee620fd-suntree/formailng/1.png" width="30" height="30" />
                     </td>
                     <td style="color: white; padding-left: 6px;">
-                      Сформулируйте задачу участия. Определите, что для вас приоритетно: модернизация, оптимизация, рост или новые рынки. Чем конкретнее задача — тем полезнее встречи.
+                      ${v('block_4_content')}
                     </td>
                   </tr>
                 </table>
@@ -336,7 +337,7 @@
       }
 
       document
-        .querySelectorAll("input")
+        .querySelectorAll("input, textarea")
         .forEach((i) => i.addEventListener("input", updatePreview));
       updatePreview();
     </script>
